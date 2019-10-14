@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 };
 
-const MONGODB_URI = process.emitWarning.MOBGODB_URI || 'mongodb://localhost/googlebooksearch'
+const MONGODB_URI = process.env.MOBGODB_URI || 'mongodb://localhost/googlebooksearch'
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
