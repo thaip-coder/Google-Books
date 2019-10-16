@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
-import Home from "./Home";
-import Nav from "./Nav";
-import Saved from "./Saved";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Saved from "./components/Saved";
  
 
-class App extends Component {
-  render() {
+const App = () => {
+ 
     return (
       <div className="App">
         <Nav />
@@ -14,7 +14,7 @@ class App extends Component {
         <Saved />
       </div>
     );
-  }
+  
 }
 
 export default App;

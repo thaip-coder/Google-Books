@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "./App.css";
 
-class Saved extends Component {
-  render() {
+
+const Saved = () => {
+
     return (
       <div>
         <h1>Saved Page</h1>
       </div>
     );
-  }
+  
 }
 
 export default Saved;
