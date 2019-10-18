@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const logger = require('morgan');
 const book = require('./models/book'); 
 
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -33,11 +33,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Get route to display books searched
-app.get('/search', function(req, res) {
-  axios.get('https://www.googleapis.com/books/v1/volumes?q=Scythe')
+app.get('/search/:id', function(req, res) {
+  axios.get('https://www.googleapis.com/books/v1/volumes?q=' + req.params.id)
   .then(function(response) {
     console.log('response', response.data)
-    res.send(response.data);
+    res.json(response.data);
   })
   .catch(function(err) {
     console.log(err)

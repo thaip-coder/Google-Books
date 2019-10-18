@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 
 
-const Saved = () => {
-
+class Saved extends Component {
+render() {
     return (
       <div>
         <h1 className="jumbotron">Saved Page</h1>
       </div>
     );
+    }
   
 }
 
